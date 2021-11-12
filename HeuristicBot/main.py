@@ -1,4 +1,4 @@
-from FullAttackBot import FullAttackBot
+from HeuristicBot import HeuristicBot
 
 import asyncio
 import time
@@ -15,9 +15,9 @@ async def main():
         battle_format="gen8randombattle",
     )
 
-    max_damage_player = FullAttackBot(
+    heuristic_player = HeuristicBot(
         battle_format="gen8randombattle",
-        player_configuration = PlayerConfiguration("Tauros", None)
+        player_configuration = PlayerConfiguration("Magneton", None)
     )
 
 
@@ -25,12 +25,12 @@ async def main():
     start = time.time()
 
     # play against the random bot
-    await max_damage_player.battle_against(random_player, n_battles=num_battles)
+    await heuristic_player.battle_against(random_player, n_battles=num_battles)
 
     print(
-        "Max damage player won %d / %d battles [this took %f seconds]"
+        "Heuristic player won %d / %d battles [this took %f seconds]"
         % (
-            max_damage_player.n_won_battles, num_battles, time.time() - start
+            heuristic_player.n_won_battles, num_battles, time.time() - start
         )
     )
 

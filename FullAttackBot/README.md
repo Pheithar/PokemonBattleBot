@@ -1,8 +1,6 @@
 # Full Attack Bot
 
-## First attempt: hardcoded bot
-
-This bot is the most basic one. It just going to attack with its strongest move all the time, if it has any attack that has type advantage or is neutral. Otherwise, it will change to the Pokémon in the team with an attack that has advantage. If there is none, it will change to a Pokémon with type advantage. If there is none, it will change to a Pokémon with neutral types. Lastly, if there are none, it will select a random attack.
+This bot is the most basic one. It just going to attack with its strongest move all the time, if it has any attack that has type advantage or is neutral. Otherwise, it will change to the Pokemon in the team with an attack that has advantage. If there is none, it will change to a Pokemon with type advantage. If there is none, it will change to a Pokemon with neutral types. Lastly, if there are none, it will select a random attack.
 
 Here is a simplification in pseudo-code of the algorithm:
 
@@ -20,7 +18,9 @@ ELSE:
     USE random_move
 ```
 
-In this first bot there are many things that are not being taken into account, such as if the changing Pkmn has PP in its move, or if is an attack move, but that does not really matter. For now, this bot is for getting familiar with the library and learn how to use it.
+In this first bot there are many things that are not being taken into account, such as if the changing Pokemon has PP in its move, or if is an attack move, but that does not really matter. For now, this bot is for getting familiar with the library and learn how to use it.
+
+## Results
 
 This simple bot, in my quick test, against a random bot, got:
 
